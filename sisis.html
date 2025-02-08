@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #d6336c;
+        }
+        .heart-img {
+            width: 150px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+    <div class="container">
+        <h1>¿Quieres ser mi Valentine? ❤️</h1>
+        <img class="heart-img" src="https://media.giphy.com/media/jnUacoo8zO5Ti/giphy.gif" alt="Heart">
+        <div class="buttons">
+            <button class="btn" onclick="answer('Sí')">Sí</button>
+            <button class="btn" onclick="answer('Por supuesto')">Por supuesto</button>
+        </div>
+    </div>
+    <script>
+        function answer(response) {
+            alert("¡Sabía que dirías " + response + "! 💖");
+        }
+    </script>
+</body>
+</html>
